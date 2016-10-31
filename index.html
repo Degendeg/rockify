@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Rockify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="player">
+        <audio id="audio" controls>
+          <source src="http://181fm-edge1.cdnstream.com/181-eagle_128k.mp3?cb=436795.mp3" id="audioSource" type="audio/mp3" codecs="mp3"></source>
+        </audio>
+        <img src="img/1.jpg" id="banner">
+        <label class="to-lyrics-label" for="to-lyrics"><i class="fa fa-caret-down fa-lg"></i></label>
+        <input type="checkbox" id="to-lyrics">
+        <div class="cover">
+          <div class="controls">
+            <button id="backward" title="Backward" onclick="bkwSource()"><i class="fa fa-backward fa-2x"></i></button>
+            <button id="play-pause" title="Play" onclick="togglePlayPause()"><i class="fa fa-play fa-3x"></i></button>
+            <button id="forward" title="Forward" onclick="frwSource()"><i class="fa fa-forward fa-2x"></i></button>
+            <input id="volume" name="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+            <div class="info">
+              <p class="song" id="genre">Classic Rock</p>
+              <p class="author">All day, any day!</p>
+            </div>
+            <div class="lyrics">
+              <a href="mailto:sebbed89@gmail.com">Questions? Contact me.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scripts -->
+      <script src="js/main.js"></script>
+  </body>
+
+</html>
